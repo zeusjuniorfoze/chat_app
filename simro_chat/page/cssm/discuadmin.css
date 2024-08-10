@@ -1,0 +1,430 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  background-color: #dfe9f5;
+}
+
+.fw-bolder {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-left: 50%;
+
+}
+
+.cc-nav {
+  position: fixed;
+  top: 0;
+  background-color: #111244;
+  width: 100%;
+  z-index: 99;
+}
+
+.sidebar {
+  position: fixed;
+  top: 115px;
+  width: 250px;
+  height: 100%;
+  background-color: #111244;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.content {
+  margin-top: 100px;
+  /* Hauteur de la barre de navigation */
+  overflow-y: auto;
+  /* Si nécessaire */
+}
+
+.nav-lik {
+  display: inline;
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+.nav-lik:hover {
+  background-color: rgba(75, 172, 208, 0.1);
+  /* Change la couleur de fond au survol */
+}
+
+.sidebar ul {
+  padding: 0;
+}
+
+.sidebar li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.sidebar li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+  align-items: center;
+}
+
+.content {
+  padding: 20px;
+  margin-left: 250px;
+  /* La largeur de la sidebar */
+}
+
+.menu li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Ajout de styles pour la version responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+#page1 {
+  background-color: transparent;
+}
+
+#page1 .bienvenue {
+  text-align: center;
+  font-size: 30px;
+}
+
+/* style de la page 2 */
+#page2 .add-user-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #007bff;
+  /* Couleur du lien */
+}
+
+#page2 .add-user-link i {
+  margin-right: 5px;
+  /* Espace entre l'icône et le texte */
+}
+
+#page2 .add-user-link:hover {
+  text-decoration: underline;
+  /* Souligner le lien au survol */
+}
+
+#page2 .table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#page2 .table th,
+#page2 .table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+#page2 .table th {
+  background-color: #f2f2f2;
+  /* Couleur de fond des en-têtes de colonne */
+}
+
+#page2 .table tbody tr:hover {
+  background-color: #f9f9f9;
+  /* Couleur de fond des lignes au survol */
+}
+
+#page2 .table td button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+#page2 .table td button i {
+  color: #007bff;
+  /* Couleur de l'icône des boutons */
+}
+
+#page2 .table td button:hover i {
+  color: #0056b3;
+  /* Couleur de l'icône des boutons au survol */
+}
+
+#page2 .search-container {
+  float: right;
+  margin-top: -40px;
+}
+
+#page2 .search-container input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#page2 .search-container input[type="text"]:focus {
+  outline: none;
+}
+
+/* style de la page 3 */
+
+#page3 .add-group-link {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #007bff;
+  /* Couleur du lien */
+}
+
+#page3 .add-group-link i {
+  margin-right: 5px;
+  /* Espace entre l'icône et le texte */
+}
+
+#page3 .add-group-link:hover {
+  text-decoration: underline;
+  /* Souligner le lien au survol */
+}
+
+#page3 .table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#page3 .table th,
+#page3 .table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+#page3 .table th {
+  background-color: #f2f2f2;
+  /* Couleur de fond des en-têtes de colonne */
+}
+
+#page3 .table tbody tr:hover {
+  background-color: #f9f9f9;
+  /* Couleur de fond des lignes au survol */
+}
+
+#page3 .table td button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+
+#page3 .table td button i {
+  color: #007bff;
+  /* Couleur de l'icône des boutons */
+  font-size: 100px;
+}
+
+#page3 .table td button:hover i {
+  color: #0056b3;
+  /* Couleur de l'icône des boutons au survol */
+}
+
+
+#page3 .search-container {
+  float: right;
+  margin-top: -40px;
+}
+
+#page3 .search-container input[type="text"] {
+  width: 200px;
+  padding: 10px;
+  margin-right: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+#page3 .search-container input[type="text"]:focus {
+  outline: none;
+}
+
+#page4 .profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#page4 .profile-picture {
+  width: 150px;
+  height: 150px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+#page4 .profile-picture img {
+  width: 100%;
+  height: auto;
+}
+
+#page4 .profile-groups {
+  flex-grow: 1;
+}
+
+#page4 .profile-groups h3 {
+  margin-bottom: 10px;
+}
+
+#page4 .profile-groups ul {
+  list-style: none;
+  padding: 0;
+}
+
+#page4 .profile-groups ul li {
+  margin-bottom: 5px;
+}
+
+/* Style pour la page Paramètres */
+#page5 {
+  display: none;
+  /* Par défaut, la page est cachée */
+}
+
+#page5.active {
+  display: block;
+  /* Affichage de la page lorsque active */
+}
+
+.setting-item {
+  margin-bottom: 20px;
+}
+
+.setting-item label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.setting-item input[type="text"],
+.setting-item select,
+.setting-item input[type="checkbox"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Style pour la page Aide */
+#page6 {
+  display: none;
+  /* Par défaut, la page est cachée */
+}
+
+#page6.active {
+  display: block;
+  /* Affichage de la page lorsque active */
+}
+
+.help-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.help-container p {
+  margin: 0;
+}
+
+/* Style pour la page active */
+.page.active {
+  display: block;
+}
+
+
+
+    .form-groupe {
+      text-align: center;
+      /* Aligner le contenu du formulaire au centre */
+    }
+
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+
+    .image-container img {
+      width: 100px;
+      /* Ajustez selon vos besoins */
+      height: auto;
+      /* Ajustez selon vos besoins */
+    }
+
+    .image-container input[type="file"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .add-button {
+      position: absolute;
+      background-color: #4caf50;
+      color: white;
+      margin: 50px;
+      bottom: 260px;
+      text-align: center;
+      border-radius: 0 0 5px 5px;
+      cursor: pointer;
+      display: none;
+      /* Masquer le bouton par défaut */
+    }
+
+    .image-container:hover .add-button {
+      display: block;
+      /* Afficher le bouton au survol */
+    }
+
+    .add-button:hover {
+      background-color: #45a049;
+    }
+
+    #button {
+      color: white;
+      margin: 5px;
+      background-color: #45a049;
+
+    }
+
+    .btn-con {
+      color: #f3940b;
+      border-color: #f3940b;
+      transition: 1s;
+    }
+
+    .btn-con:hover,
+    .btn-con:active {
+      color: white;
+      background-color: #f3940b;
+    }
+
+/* Ajoutez d'autres styles selon vos besoins */

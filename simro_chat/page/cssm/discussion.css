@@ -1,0 +1,217 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  background-color: #dfe9f5;
+}
+
+.fw-bolder {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-left: 30%;
+
+}
+.btn-con {
+  color: #f3940b;
+  border-color: #f3940b;
+  transition: 1s;
+}
+.btn-con:hover,
+.btn-con:active{
+  color: white;
+  background-color: #f3940b;
+}
+
+.cc-nav {
+  position: fixed;
+  top: 0;
+  background-color: #111244;
+  width: 100%;
+  z-index: 99;
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 115px;
+  width: 250px;
+  height: 100%;
+  background-color: #111244;
+  transition: width 0.2s linear;
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+}
+
+.content {
+  margin-top: 100px;
+  /* Hauteur de la barre de navigation */
+  overflow-y: auto;
+  /* Si nécessaire */
+}
+
+.nav-lik {
+  display: inline;
+  color: white;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+}
+
+.nav-lik:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Change la couleur de fond au survol */
+}
+
+.sidebar ul {
+  padding: 0;
+}
+
+.sidebar li {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.sidebar li a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px;
+  font-family: Arial, sans-serif;
+  align-items: center;
+}
+
+.content {
+  padding: 20px;
+  margin-left: 250px;
+  /* La largeur de la sidebar */
+}
+
+.menu li:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Ajout de styles pour la version responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+#page1 {
+  background-color: transparent;
+}
+
+#page1 .bienvenue {
+  text-align: center;
+  font-size: 30px;
+}
+
+#page2 .profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#page2 .profile-picture {
+  width: 150px;
+  height: 150px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+#page2 .profile-picture img {
+  width: 100%;
+  height: auto;
+}
+
+#page2 .profile-groups {
+  flex-grow: 1;
+}
+
+#page2 .profile-groups h3 {
+  margin-bottom: 10px;
+}
+
+#page2 .profile-groups ul {
+  list-style: none;
+  padding: 0;
+}
+
+#page2 .profile-groups ul li {
+  margin-bottom: 5px;
+}
+
+/* Style pour la page Paramètres */
+#page3 {
+  display: none;
+  /* Par défaut, la page est cachée */
+}
+
+#page3.active {
+  display: block;
+  /* Affichage de la page lorsque active */
+}
+
+.setting-item {
+  margin-bottom: 20px;
+}
+
+.setting-item label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.setting-item input[type="text"],
+.setting-item select,
+.setting-item input[type="checkbox"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Style pour la page Aide */
+#page4 {
+  display: none;
+  /* Par défaut, la page est cachée */
+}
+
+#page4.active {
+  display: block;
+  /* Affichage de la page lorsque active */
+}
+
+.help-container {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.help-container p {
+  margin: 0;
+}
+
+/* Style pour la page active */
+.page.active {
+  display: block;
+}
+
+/* Ajoutez d'autres styles selon vos besoins */

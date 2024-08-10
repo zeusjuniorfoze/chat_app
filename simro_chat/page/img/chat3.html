@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Chat</title>
+    <style type="text/css">
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.chat-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.chat-header a {
+    text-decoration: none;
+    color: #3498db;
+    cursor: pointer;
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.chat-input {
+    display: flex;
+}
+
+textarea {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.call-icons span {
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <a href="#" onclick="goBack()">Retour</a>
+            <h2>Nom du Contact</h2>
+            <div class="call-icons">
+                <span onclick="startAudioCall()">📞</span>
+                <span onclick="startVideoCall()">📹</span>
+            </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <!-- Zone d'affichage des messages -->
+        </div>
+        <div class="chat-input">
+            <textarea id="messageInput" placeholder="Écrire un message"></textarea>
+            <button onclick="sendMessage()">Envoyer</button>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function sendMessage() {
+    var messageInput = document.getElementById('messageInput');
+    var chatMessages = document.getElementById('chatMessages');
+
+    var messageText = messageInput.value.trim();
+    if (messageText !== '') {
+        chatMessages.innerHTML += '<div class="message">Moi : ' + messageText + '</div>';
+        messageInput.value = '';
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+}
+
+function goBack() {
+    alert("Fonctionnalité de retour à implémenter !");
+    // Ajoutez ici la logique pour revenir en arrière
+}
+
+function startAudioCall() {
+    alert("Fonctionnalité d'appel audio à implémenter !");
+    // Ajoutez ici la logique pour commencer un appel audio
+}
+
+function startVideoCall() {
+    alert("Fonctionnalité d'appel vidéo à implémenter !");
+    // Ajoutez ici la logique pour commencer un appel vidéo
+}
+
+    </script>
+</body>
+</html>

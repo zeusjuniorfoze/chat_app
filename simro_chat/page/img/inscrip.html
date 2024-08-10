@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulaire d'Inscription</title>
+<style>
+ 
+</style>
+</head>
+<body>
+<div class="container">
+  <form>
+    <h2>Créer un nouveau compte</h2>
+    <div class="form-group">
+      <label for="nom">Nom :</label>
+      <input type="text" id="nom" name="nom" required>
+    </div>
+    <div class="form-group">
+      <label for="prenom">Prénom :</label>
+      <input type="text" id="prenom" name="prenom" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email :</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="mot_de_passe">Mot de passe :</label>
+      <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+    </div>
+    <div class="button-container">
+      <button type="button" class="cancel-button" onclick="window.location.href = 'index.html';">Annuler</button>
+      <button type="submit" class="submit-button">Valider</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>

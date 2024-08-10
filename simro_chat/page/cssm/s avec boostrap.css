@@ -1,0 +1,43 @@
+body, html {
+  background: linear-gradient(rgba(1, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/6.jpg") center center fixed no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  background-color: #dfe9f5;
+}
+.cc-nav {
+  position: fixed;
+  top: 0;
+  background-color: #111244;
+  width: 100%;
+  box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.54);
+  z-index: 99;
+}
+.fw-bolder {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  margin-left: 30%;
+}
+.btn-in {
+  color: #f3940b;
+  border-color: #f3940b;
+  transition: 1s;
+}
+.btn-in:hover,
+.btn-inr:active{
+  color: white;
+  background-color: #f3940b;
+}
+.btn-con{
+  color: #119bea;
+  border-color: #119bea;
+  margin-top: 1px;
+  transition: 1s;
+}
+.btn-con:hover,
+.btn-con:active{
+  color: white;
+  background-color: #119bea;
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de Bord du Chat</title>
+    <style type="text/css">
+        body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 10px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.chat-container {
+    flex: 1;
+    padding: 20px;
+}
+
+.chat-header {
+    background-color: #eee;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.chat-input {
+    display: flex;
+}
+
+textarea {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="sidebar">
+            <h2>Contacts</h2>
+            <ul id="contactList">
+                <!-- Liste des contacts -->
+                <li>Contact 1</li>
+                <li>Contact 2</li>
+                <!-- Ajoutez dynamiquement les contacts ici avec JavaScript -->
+            </ul>
+        </div>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Nom du Contact</h2>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Zone d'affichage des messages -->
+            </div>
+            <div class="chat-input">
+                <textarea id="messageInput" placeholder="Écrire un message"></textarea>
+                <button onclick="sendMessage()">Envoyer</button>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+    // Fonction pour envoyer un message (à adapter selon votre backend)
+function sendMessage() {
+    var messageInput = document.getElementById('messageInput');
+    var chatMessages = document.getElementById('chatMessages');
+
+    var messageText = messageInput.value.trim();
+    if (messageText !== '') {
+        // Ajoutez le message à la zone d'affichage des messages
+        chatMessages.innerHTML += '<div class="message">Moi : ' + messageText + '</div>';
+        // Efface le champ de saisie
+        messageInput.value = '';
+        // Faites défiler la zone des messages vers le bas
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+}
+
+// Exemple : ajout dynamique de contacts (à adapter selon votre backend)
+document.addEventListener('DOMContentLoaded', function() {
+    var contactList = document.getElementById('contactList');
+    var contacts = ['Contact 1', 'Contact 2', 'Contact 3'];
+
+    contacts.forEach(function(contact) {
+        var li = document.createElement('li');
+        li.textContent = contact;
+        li.addEventListener('click', function() {
+            // Mettez à jour le nom du contact dans l'en-tête du chat
+            document.querySelector('.chat-header h2').textContent = contact;
+            // Effacez la zone d'affichage des messages (simulez le changement de contact)
+            document.getElementById('chatMessages').innerHTML = '';
+        });
+        contactList.appendChild(li);
+    });
+});
+
+</script>
+</body>
+</html>

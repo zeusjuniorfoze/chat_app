@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="cssm/inscrip.css">
+    <title>JMAIL APLICATION</title>
+</head>
+<body>
+    <div class="container">
+        <form id="loginForm" onsubmit="return validateForm()">
+            <h2 class="conn">Connexion</h2>
+            <label for="username">Email de l'utilisateur</label>
+            <input type="text" id="username" name="username" placeholder="nom@gmail.com">
+
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="**********">
+
+            <button type="submit">Se connecter</button>
+
+            <p id="error-message" class="error"></p>
+
+            <div class="form-links">
+                 <a href="#" onclick="showForgotPasswordForm()">Mot de passe oublié</a>
+                <span class="separator">|</span>
+               <a href="#" onclick="showCreateAccountForm()">Créer un nouveau compte</a>
+            </div>
+        </form>
+
+        <form id="createAccountForm" style="display: none;">
+            <h2>Créer un nouveau compte</h2>
+            <!-- Ajoutez les champs nécessaires pour créer un compte -->
+            <div class="form-group">
+                <label for="nom">Nom :</label>
+                <input type="text" id="nom" name="nom" required>
+            </div>
+            <div class="form-group">
+                <label for="prenom">Prénom :</label>
+                <input type="text" id="prenom" name="prenom" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="mot_de_passe">Mot de passe :</label>
+                <input type="password" id="mot_de_passe" name="mot_de_passe" required>
+            </div>
+            <div class="button-container">
+                <button type="button" class="cancel-button" onclick="showLoginForm()">Annuler</button>
+                <button type="submit" class="submit-button">Valider</button>
+            </div>
+        </form>
+
+        <form id="forgotPasswordForm" style="display: none;">
+            <h2>Mot de passe oublié</h2>
+            <!-- Ajoutez les champs nécessaires pour la récupération de mot de passe -->
+            <button type="button" onclick="recoverPassword()">Envoyer le lien de récupération</button>
+            <a href="#" onclick="showLoginForm()">Retour à la connexion</a>
+        </form>
+    </div>
+
+    <script type="text/javascript">
+        function validateForm() {
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    var errorMessage = document.getElementById('error-message');
+
+    // Validation côté client simple
+    if (username === "" || password === "") {
+        errorMessage.textContent = "Veuillez remplir tous les champs.";
+        return false;
+    } else {
+        errorMessage.textContent = "";
+        // Vous pouvez ajouter ici une logique de traitement ou soumettre le formulaire au serveur.
+        return true;
+    }
+}
+
+function showCreateAccountForm() {
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('createAccountForm').style.display = 'block';
+    document.getElementById('forgotPasswordForm').style.display = 'none';
+}
+
+function showForgotPasswordForm() {
+    document.getElementById('loginForm').style.display = 'none';
+    document.getElementById('createAccountForm').style.display = 'none';
+    document.getElementById('forgotPasswordForm').style.display = 'block';
+}
+
+function showLoginForm() {
+    document.getElementById('loginForm').style.display = 'block';
+    document.getElementById('createAccountForm').style.display = 'none';
+    document.getElementById('forgotPasswordForm').style.display = 'none';
+}
+
+function createAccount() {
+    alert("Fonctionnalité de création de compte à implémenter !");
+    // Ajoutez ici la logique pour créer un nouveau compte.
+}
+
+function recoverPassword() {
+    alert("Fonctionnalité de récupération de mot de passe à implémenter !");
+    // Ajoutez ici la logique pour envoyer un lien de récupération de mot de passe.
+}
+
+    </script>
+</body>
+</html>

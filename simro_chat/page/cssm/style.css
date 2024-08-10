@@ -1,0 +1,275 @@
+/* Style generale */
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background-color: #113;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* variable de couleur */
+
+:root {
+    --message_envoyer: #27f;
+    --message_recu: #ccc;
+}
+
+/* style sur la page autour de la zone de conversation */
+
+.container {
+    width: 85%;
+    height: 100vh;
+    background: #224;
+    border-radius: 10px;
+    display: block;
+    position: relative;
+}
+
+/* apparition des blocs (entete, zone message, zone saisir et envoi) */
+
+.espace_entete {
+    width: 100%;
+    height: 7%;
+    background-color: transparent;
+    justify-content: space-between;
+    position: relative;
+    padding-top: 1%;
+
+}
+
+/* Style sur entete */
+.img {
+    position: absolute;
+    left: 20%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.icon {
+    width: 20%;
+    height: 50%;
+    border-radius: 10px;
+    position: absolute;
+    left: 70%;
+    margin-bottom: 10px;
+}
+
+.fleche_retour {
+    position: absolute;
+    left: 5%;
+}
+
+.nom_utilisateur {
+    position: absolute;
+    left: 40%;
+    font-size: larger;
+    color: #fff;
+}
+
+.bx {
+    font-size: 30px;
+    margin: 0 10px;
+    color: #eff;
+}
+
+.bx:hover {
+    color: #0f0;
+}
+
+/* espace conversation */
+
+.espace_conversation {
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: 3%;
+    width: 85%;
+    height: 73%;
+    background: #fff;
+    margin-left: 7.5%;
+    border-radius: 15px;
+    position: relative;
+    transition: all .7s;
+}
+
+.espace_conversation:hover {
+    box-shadow: 0 0 10px 7px #12221177;
+}
+
+/* message envoyer */
+
+.m {
+    width: 20%;
+    height: 15%;
+    overflow: auto;
+    border: transparent;
+    padding: 20px;
+    border-radius: 5px;
+    position: absolute;
+    color: #fff;
+}
+
+.m:hover {
+    box-shadow: 0 0 10px 7px #12221177;
+}
+
+.m1 {
+    background-color: var(--message_envoyer);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    top: 20%;
+    left: 80%;
+
+}
+
+.m2 {
+    background-color: var(--message_recu);
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    top: 40%;
+    left: 5%;
+}
+
+.m3 {
+    background-color: var(--message_envoyer);
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
+    top: 60%;
+    left: 80%;
+}
+
+.m4 {
+    padding-left: 30px;
+    background-color: var(--message_recu);
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    top: 80%;
+    left: 5%;
+}
+
+.m5 {
+    background-color: var(--message_envoyer);
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    top: 100%;
+    left: 80%;
+}
+
+.m6 {
+    padding-left: 30px;
+    background-color: var(--message_recu);
+    border-bottom-right-radius: 50px;
+    top: 120%;
+    left: 5%;
+    border-bottom-right-radius: 50px;
+}
+
+.m7 {
+    background-color: var(--message_envoyer);
+    border-bottom-left-radius: 50px;
+    top: 140%;
+    left: 80%;
+}
+
+.m8 {
+    padding-left: 30px;
+    background-color: var(--message_recu);
+    border-bottom-right-radius: 50px;
+    top: 160%;
+    left: 5%;
+    border-bottom-right-radius: 50px;
+}
+
+.m9 {
+    background-color: var(--message_envoyer);
+    border-bottom-left-radius: 50px;
+    top: 180%;
+    left: 80%;
+}
+
+.m10 {
+    padding-left: 30px;
+    background-color: var(--message_recu);
+    border-bottom-right-radius: 50px;
+    top: 200%;
+    left: 5%;
+    border-bottom-right-radius: 50px;
+}
+
+.m11 {
+    background-color: var(--message_envoyer);
+    border-bottom-left-radius: 50px;
+    top: 220%;
+    left: 80%;
+}
+
+.espace_zone_saisir_et_bouton_envoi {
+    width: 100%;
+    height: 8%;
+    background: transparent;
+    border-radius: 50px;
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* style sur la barre de saisir et le bouton */
+
+.espace_zone_saisir_et_bouton_envoi textarea {
+    width: 50%;
+    height: 100%;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 5px;
+}
+
+.espace_zone_saisir_et_bouton_envoi button[type="submit"] {
+    width: 5%;
+    height: 7%;
+    border-radius: 50%;
+    background: transparent;
+    position: absolute;
+    right: 75px;
+    transition: all .5s;
+    border: none;
+    cursor: pointer;
+}
+
+/* style avancee :) */
+
+
+.espace_zone_saisir_et_bouton_envoi textarea {
+    transition: all .5s;
+    animation: animate 2s 0s infinite;
+}
+
+@keyframes animate {
+    50% {
+        background-color: #8ff
+    }
+}
+
+.espace_zone_saisir_et_bouton_envoi textarea:hover {
+    width: 60%;
+    box-shadow: 0 0 20px 10px rgb(0, 0, 0, .5);
+}
+
+.espace_zone_saisir_et_bouton_envoi button[type="submit"]:hover {
+    box-shadow: 0 0 20px 10px rgb(0, 0, 0, .5);
+    width: 6%;
+    height: 8%;
+}
+
+.espace_conversation:hover {
+    box-shadow: 0 0 10px 1px rgb(0, 0, 0, .3);
+}

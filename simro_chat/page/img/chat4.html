@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        #search {
+            padding: 10px;
+            margin: 10px;
+            width: 80%;
+        }
+
+        #chat-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #message-list {
+            width: 80%;
+            border: 1px solid #ccc;
+            padding: 10px;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        #message-input {
+            width: 80%;
+            padding: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <h1>Chat App</h1>
+    </nav>
+
+    <div id="search">
+        <input type="text" id="search-input" placeholder="Rechercher en temps réel...">
+    </div>
+
+    <div id="chat-container">
+        <div id="message-list"></div>
+        <input type="text" id="message-input" placeholder="Entrez votre message...">
+    </div>
+
+    <script>
+        // Code JavaScript ici pour gérer la recherche en temps réel et l'affichage des discussions
+        // Vous pouvez utiliser AJAX pour récupérer les messages du serveur, ou simuler des données côté client.
+        // N'oubliez pas d'ajouter vos propres fonctionnalités et de sécuriser le code en production.
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
+  <style type="text/css">
+    /* styles.css */
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      height: 100%;
+    }
+    .fw-bolder {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-left: 30%;
+      color: white;
+    }
+    .cc-nav {
+      background-color: #333;
+      font-family: Arial, sans-serif;
+      box-shadow: 1px 1px 3px rgba(255, 255, 255, 0.54);
+      z-index: 99;
+    }
+    .nav-lik {
+      display: inline;
+      color: white;
+      text-decoration: none;
+      font-family: Arial, sans-serif;
+    }
+    .nav-lik:hover {
+      background-color: rgba(255, 255, 255, 0.1); /* Change la couleur de fond au survol */
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #333;
+      color: #fff;
+      height: 100%;
+      position: fixed;
+    }
+    .sidebar ul {
+      padding: 0;
+    }
+    .sidebar li {
+      list-style-type: none;
+      padding: 10px;
+    }
+    .sidebar li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 30px;
+      font-family: Arial, sans-serif;
+    }
+    .content {
+      padding: 20px;
+      margin-left: 250px; /* La largeur de la sidebar */
+    }
+    .menu li:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    .page {
+      display: none;
+    }
+    .page.active {
+      display: block;
+    }
+    .scrolling-title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      font-size: 3em;
+      color: #333;
+      overflow: hidden;
+      transition: all .7s;
+      animation: scroll 10s linear infinite;
+    }
+    @keyframes scroll {
+      0% {
+        transform: translateX(100%);
+      }
+      /*50% {
+        transform: scale(0.3);
+         color: rgb(243, 161, 187);
+      }
+      70% {
+        transform: rotate(100deg);
+      }
+      80% {
+        transform: rotate(90deg);
+      }*/
+    }
+    /* Ajout de styles pour la version responsive */
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+      }
+      .content {
+        margin-left: 0;
+      }
+    }
+  </style>
+  <title>Tableau de bord</title>
+</head>
+<body>
+  <nav class="cc-nav navbar navbar-daK">
+    <div class="container-fluid">
+      <img src="logo.PNG" alt="" width="100" height="100" class="d-inline-block align-text-top">
+      <h1 class="fw-bolder"><i style="color: rgb(8, 125, 143);">JMAIL</i> <i style="color: rgb(243, 161, 187);"> APLICATION</i></h1>
+      <ul class="navbar-nav ms-auto mb-2lg-0">
+        <li><a href="../deconnexion.php" class="nav-lik"><i class='bx bx-log-out'></i> DECONNEXION</a></li>
+      </ul> 
+    </div>
+  </nav>
+  <div class="sidebar">
+    <ul class="menu">
+      <li><a href="#page1"><i class="bx bx-home"></i> Accueil</a></li>
+      <li><a href="#page2"><i class="bx bx-user"></i> Profil</a></li>
+      <li><a href="../index.php"><i class="bx bx-envelope"></i> Messages</a></li>
+      <!-- Ajoutez d'autres liens avec des icônes ici -->
+    </ul>
+  </div>
+  <div class="content">
+    <p class="scrolling-title">BIENVENUE SUR JMAIL APLICATION</p>
+    <!-- Contenu des différentes pages -->
+    <div id="page1" class="page">
+      <p>BIENVENUE SUR JMAIL APLICATION</p>
+    </div>
+    <div id="page2" class="page">
+      <h1>Profil</h1>
+      <p>Voici votre profil.</p>
+    </div>
+    <div id="page3" class="page">
+      <h1>Messages</h1>
+      <p>Vos messages seront affichés ici.</p>
+    </div>
+    <!-- Ajoutez d'autres pages ici -->
+  </div>
+  <script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('.sidebar .menu li a');
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          const targetId = this.getAttribute('href');
+          const targetPage = document.querySelector(targetId);
+          document.querySelectorAll('.page').forEach(page => {
+            page.classList.remove('active');
+          });
+          document.querySelector('.content p').style.display = 'none'; // Masquer le paragraphe
+          targetPage.classList.add('active');
+          e.preventDefault();
+        });
+      });
+    });
+  </script>
+</body>
+</html>

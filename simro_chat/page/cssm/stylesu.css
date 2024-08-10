@@ -1,0 +1,125 @@
+/* Réinitialisation de la mise en page de base */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cdf; /* Fond de la page */
+    color: #333; /* Couleur du texte par défaut */
+}
+
+/* Style pour le thème clair */
+.light-theme {
+    background: #f7f7f7; /* Fond blanc */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                0 5px 15px rgba(0, 0, 0, 0.05); /* Ombre légère */
+    border-radius: 10px; /* Coins arrondis */
+}
+
+/* Conteneur principal pour le contact */
+.contact-container {
+    max-width: 1300px; /* Largeur maximale */
+    margin: 50px auto; /* Centrer le conteneur */
+    overflow: hidden; /* Masquer le dépassement */
+    margin-top: 0%;
+}
+
+/* Section du profil utilisateur */
+.profile {
+    text-align: center; /* Centrer le texte */
+    padding: 20px; /* Espace intérieur */
+}
+
+/* Image de profil */
+.profile img {
+    width: 100px; /* Taille de l'image */
+    height: 100px;
+    border-radius: 50%; /* Coins arrondis pour un aspect circulaire */
+    margin-bottom: 10px; /* Espace en bas de l'image */
+}
+
+/* Informations de l'utilisateur */
+.user-info {
+    margin-bottom: 10px; /* Espace en bas des informations */
+}
+
+/* Nom de l'utilisateur */
+.name {
+    font-size: 18px; /* Taille du texte */
+    font-weight: bold; /* Gras */
+}
+
+/* Numéro de téléphone de l'utilisateur */
+.number {
+    font-size: 14px; /* Taille du texte */
+    color: #888; /* Couleur du texte grise */
+}
+
+/* Actions de l'utilisateur (Audio, Video, Recherche) */
+.actions {
+    display: flex; /* Disposition en ligne pour les boutons */
+    justify-content: space-around; /* Espacement équitable des boutons */
+    margin-top: 20px; /* Espace en haut des boutons */
+}
+
+/* Style des boutons d'action */
+.actions button {
+    padding: 10px; /* Espace interne du bouton */
+    font-size: 14px; /* Taille du texte du bouton */
+    border: none; /* Supprimer la bordure par défaut */
+    border-radius: 5px; /* Coins arrondis du bouton */
+    cursor: pointer; /* Curseur au survol */
+}
+
+/* Section des groupes en commun */
+.groups {
+    padding: 20px; /* Espace interne */
+}
+
+/* Titre de la section des groupes */
+.groups h2 {
+    font-size: 18px; /* Taille du texte */
+    font-weight: bold; /* Gras */
+    color: #333; /* Couleur du texte */
+}
+
+/* Liste des groupes avec interaction au survol */
+.group-list {
+    height: 212px; /* Hauteur de 200px */
+    overflow-y: scroll; /* faire sorti une barre de defilement si il ya depassement du flo sur l'axe Y */
+    list-style: none; /* Supprimer les puces de la liste */
+    padding: 0; /* Supprimer le rembourrage de la liste */
+    margin-top: 10px; /* Espace en haut de la liste */
+}
+
+/* Style des éléments de la liste des groupes */
+.group-list li {
+    font-size: 16px; /* Taille du texte */
+    color: #555; /* Couleur du texte grise par défaut */
+    margin-bottom: 5px; /* Espace en bas de chaque élément de la liste */
+    cursor: pointer; /* Curseur au survol */
+    transition: color 0.3s ease; /* Transition de couleur en 0.3 secondes */
+}
+
+/* Style au survol des éléments de la liste des groupes */
+.group-list li:hover {
+    color: #25d366; /* Changement de couleur au survol */
+}
+
+/* Bouton pour créer un groupe */
+.create-group-btn {
+    display: block; /* Affichage en tant que bloc */
+    width: 100%; /* Largeur maximale */
+    padding: 10px; /* Espace interne du bouton */
+    background-color: #4caf50; /* Couleur de fond verte */
+    color: #fff; /* Couleur du texte blanc */
+    font-size: 14px; /* Taille du texte du bouton */
+    border: none; /* Supprimer la bordure par défaut */
+    border-radius: 5px; /* Coins arrondis du bouton */
+    cursor: pointer; /* Curseur au survol */
+}
+
+/* Style au survol du bouton de création de groupe */
+.create-group-btn:hover {
+    background-color: #45a049; /* Changement de couleur au survol */
+    transition: background-color 0.3s ease; /* Transition de couleur en 0.3 secondes */
+}
